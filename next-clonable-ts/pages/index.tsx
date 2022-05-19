@@ -1,9 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useSelector } from 'react-redux'
+import { useAppSelector } from '../redux/hooks'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
+  const name = useAppSelector(state=>state.awesomeness.name)
   return (
     <div className={styles.container}>
       <Head>
@@ -59,7 +62,7 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}  Don😁 and
+          Powered by{' '}  {name} and
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
