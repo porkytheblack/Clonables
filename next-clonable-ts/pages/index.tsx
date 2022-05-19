@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useSelector } from 'react-redux'
+import styled from 'styled-components'
 import { useAppSelector } from '../redux/hooks'
 import styles from '../styles/Home.module.css'
 
@@ -55,7 +56,11 @@ const Home: NextPage = () => {
           </a>
         </div>
       </main>
-
+      <div className="flex flex-row w-full items-center justify-center">
+        <StyledComponentsTest>
+          Styled Component Test
+        </StyledComponentsTest>
+      </div>
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -73,3 +78,8 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+const StyledComponentsTest = styled.h5`
+  color: blue;
+  font-size: 20px;
+`
