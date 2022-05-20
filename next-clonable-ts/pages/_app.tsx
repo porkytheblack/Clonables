@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../utils/antDesignStyles.less';
 import type { AppProps } from 'next/app'
 import { wrapper } from '../redux/Store'
 
